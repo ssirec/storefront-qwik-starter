@@ -86,12 +86,12 @@ async function main() {
 
 	const order = await getSortOrder();
 
-	const defaultLocale = files.find((f) => f.name.endsWith('.en.json'));
+	const defaultLocale = files.find((f) => f.name.endsWith('.sl.json'));
 	const defaultList = await sortTranslations(defaultLocale!.path, order);
 	const keyOrder = defaultList.map((i) => i.match(/"(.*)":/)![1]);
 
 	for (const file of files) {
-		if (file.name.endsWith('.en.json')) {
+		if (file.name.endsWith('.sl.json')) {
 			continue;
 		}
 		await sortTranslations(file.path, undefined, keyOrder);
