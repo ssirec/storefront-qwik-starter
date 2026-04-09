@@ -67,5 +67,6 @@
 		"graphql": "^16.11.0",
 		"graphql-tag": "^2.12.6",
 		"zod": "^4.1.11"
+		"@builder.io/qwik-city": "^1.8.0"
 	}
 }
